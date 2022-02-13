@@ -11,7 +11,6 @@ import {
   contractAddress, ownerAddress
 } from '../../config'
 import Blog from '../../artifacts/contracts/Blog.sol/Blog.json'
-import Image from 'next/image'
 
 const ipfsURI = 'https://ipfs.io/ipfs/'
 
@@ -44,7 +43,7 @@ export default function Post({ post }) {
             {
               /* if the post has a cover image, render it */
               post.coverImage && (
-                <Image
+                <img
                   src={post.coverImage}
                   className={coverImageStyle}
                   alt="coverimage"

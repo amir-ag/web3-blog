@@ -9,7 +9,6 @@ import { create } from 'ipfs-http-client';
 import { contractAddress } from '../config';
 
 import Blog from '../artifacts/contracts/Blog.sol/Blog.json';
-import Image from 'next/image';
 
 /* define the ipfs endpoint */
 const client = create('https://ipfs.infura.io:5001/api/v0');
@@ -95,7 +94,7 @@ function CreatePost() {
   return (
     <div className={container}>
       {image && (
-        <Image
+        <img
           className={coverImageStyle}
           src={URL.createObjectURL(image)}
           alt="image"

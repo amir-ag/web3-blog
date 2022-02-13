@@ -10,7 +10,6 @@ import {
   contractAddress
 } from '../../config'
 import Blog from '../../artifacts/contracts/Blog.sol/Blog.json'
-import Image from 'next/image'
 
 const ipfsURI = 'https://ipfs.io/ipfs/'
 const client = create('https://ipfs.infura.io:5001/api/v0')
@@ -109,7 +108,7 @@ export default function Post() {
           <div>
             {
               post.coverImagePath && (
-                <Image
+                <img
                   src={post.coverImagePath}
                   className={coverImageStyle}
                   alt="cover image"

@@ -10,7 +10,6 @@ import { contractAddress, ownerAddress } from '../config';
 
 /* import Application Binary Interface (ABI) */
 import Blog from '../artifacts/contracts/Blog.sol/Blog.json';
-import Image from 'next/image';
 
 export default function Home(props) {
   /* posts are fetched server side and passed in as props */
@@ -34,7 +33,7 @@ export default function Home(props) {
                 <div className={linkStyle}>
                   <p className={postTitle}>{post[1]}</p>
                   <div className={arrowContainer}>
-                    <Image
+                    <img
                       src="/right-arrow.svg"
                       alt="Right arrow"
                       className={smallArrow}
@@ -52,7 +51,7 @@ export default function Home(props) {
           /* to create the first post */
           <button className={buttonStyle} onClick={navigate}>
             Create your first post
-            <Image src="/right-arrow.svg" alt="Right arrow" className={arrow} />
+            <img src="/right-arrow.svg" alt="Right arrow" className={arrow} />
           </button>
         )}
       </div>
